@@ -93,10 +93,10 @@ header {
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-weight: 900;
   font-size: 1.8rem;
+  font-weight: 700;
   color: var(--primary);
+  z-index: 1001; /* Above hero content */
 }
 
 .logo span {
@@ -239,16 +239,7 @@ nav ul li a:hover::after {
   background-color: white;
   color: var(--primary);
 }
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary);
-  z-index: 1001; /* Above hero content */
-}
 
-.logo span {
-  color: var(--secondary);
-}
 
 /* ===== Services Section ===== */
 .services {
