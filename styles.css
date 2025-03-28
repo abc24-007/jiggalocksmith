@@ -1,19 +1,16 @@
-/* ===== Base Styles ===== */
 :root {
-  --primary: #2c3e50;
-  --secondary: #e74c3c;
-  --accent: #3498db;
-  --light: #ecf0f1;
-  --dark: #2c3e50;
-  --gray: #95a5a6;
-  --success: #2ecc71;
-  --font-main: 'Poppins', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease-in-out;
+  --primary: #2c3e50;       // Dark blue (main brand color)
+  --secondary: #e74c3c;     // Red (accent color)
+  --accent: #3498db;        // Blue (secondary accent)
+  --light: #ecf0f1;         // Off-white (backgrounds)
+  --dark: #2c3e50;         // Text color
+  --gray: #95a5a6;          // Secondary text
+  --success: #2ecc71;       // Not used but available
+  --font-main: 'Poppins';   // Body font
+  --font-heading: 'Montserrat'; // Headings
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Consistent shadow
+  --transition: all 0.3s ease-in-out; // Smooth animations
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -42,24 +39,16 @@ img {
 
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;      // Responsive container
+  margin: 0 auto;         // Centered content
   padding: 0 20px;
 }
 
 .btn {
-  display: inline-block;
   padding: 12px 30px;
-  background-color: var(--secondary);
-  color: white;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
+  border-radius: 50px;    // Pill-shaped buttons
   box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .btn:hover {
