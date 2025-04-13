@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback - JIGGAlocksmith</title>
-  <link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - JIGGAlocksmiths</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-     <!-- Hamburger Icon -->
-    <button class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <a href="feedback.html">Feedback</a>
-    </nav>
-  </header>
+    <header>
+        <!-- Same header as about.html -->
+    </header>
 
-  <main>
-    <h1>Feedback</h1>
-    <form id="feedbackForm" action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <main class="feedback-section">
+        <div class="feedback-container">
+            <h1>Share Your Experience</h1>
+            <form id="feedbackForm" action="#" method="post">
+                <div class="form-group">
+                    <label>Service Rating</label>
+                    <div class="rating-stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label>Service Type</label>
+                    <div class="service-types">
+                        <label><input type="radio" name="serviceType" value="residential"> Residential</label>
+                        <label><input type="radio" name="serviceType" value="commercial"> Commercial</label>
+                        <label><input type="radio" name="serviceType" value="automotive"> Automotive</label>
+                    </div>
+                </div>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
 
-      <button type="submit">Submit</button>
-    </form>
-  </main>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 JIGGAlocksmith. All rights reserved.</p>
-  </footer>
+                <div class="form-group">
+                    <textarea placeholder="Your Feedback" rows="6" required></textarea>
+                </div>
 
-  <script src="js/script.js"></script>
+                <div class="form-group">
+                    <label>Would you recommend us?</label>
+                    <div class="recommend-options">
+                        <label><input type="radio" name="recommend" value="yes"> Definitely Yes!</label>
+                        <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+                        <label><input type="radio" name="recommend" value="no"> Not Sure</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Keep existing footer -->
+    </footer>
+    <script src="js/feedback.js"></script>
 </body>
 </html>
