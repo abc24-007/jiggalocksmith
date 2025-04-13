@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Me</title>
-  <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JIGGAlocksmiths</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-
 <body>
-  <!-- Bootstrap JS and dependencies -->
+    <header>
+        <!-- Same header as about.html -->
+    </header>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <main class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>123 Security Street<br>Johannesburg, 2000</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>Emergency: <a href="tel:+27111234567">011 123 4567</a><br>Office: <a href="tel:+27119876543">011 987 6543</a></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+            <div class="contact-form">
+                <h2>Quick Contact Form</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Service Needed</option>
+                            <option>Emergency Lockout</option>
+                            <option>Key Duplication</option>
+                            <option>Lock Repair</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
 
-<header>
-   <!-- Hamburger Icon -->
-    <button class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Johannesburg&output=embed" 
+                    frameborder="0" 
+                    style="border:0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </main>
 
-<h1>Contact Me</h1>
-
-<nav>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-
-</nav>
-
-</header>
-
-
-<main>
-
-<p>If you'd like to get in touch, feel free to email us at <a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></p>
-<p>Follow me on Instagram: <a href="https://www.instagram.com/lebo_zuzu/" target="_blank">@lebo_zuzu</a></p>
-</main>
-
-
-<footer>
-
-<p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
-
-</footer>
-
+    <footer>
+        <!-- Keep existing footer -->
+    </footer>
 </body>
+</html>
