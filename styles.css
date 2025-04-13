@@ -237,35 +237,138 @@ nav a:hover::after {
 }
 
 /* ===== Testimonials ===== */
-.testimonials {
+.testimonials-section {
   padding: 100px 20px;
-  background: white;
+  background: var(--light);
 }
 
-.testimonial-grid {
+.testimonials-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-intro h1 {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.testimonials-intro .subtitle {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+
+.testimonials-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .testimonial-card {
-  background: var(--light);
-  padding: 40px 30px;
-  border-radius: 10px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: var(--shadow);
+  transition: var(--transition);
   position: relative;
 }
 
-.testimonial-card::before {
-  content: '\201C';
-  font-family: Georgia, serif;
-  font-size: 5rem;
-  color: rgba(231, 76, 60, 0.1);
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.testimonial-card:hover {
+  transform: translateY(-5px);
 }
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-info img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid var(--secondary);
+}
+
+.client-details h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 5px;
+}
+
+.rating {
+  color: #ffd700;
+  margin: 8px 0;
+}
+
+.rating i {
+  margin-right: 3px;
+}
+
+.service-used {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--primary);
+  color: var(--dark);
+}
+
+.testimonial-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-top: 20px;
+}
+
+.leave-testimonial {
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 80px auto 0;
+}
+
+.leave-testimonial h2 {
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+  }
+
+  .client-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .client-info img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
 
 /* ===== Contact Page ===== */
 .contact-section {
