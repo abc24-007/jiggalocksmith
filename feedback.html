@@ -35,7 +35,7 @@
             <h1>Share Your Experience</h1>
             <form id="feedbackForm" action="#" method="post">
                 <div class="form-group">
-                    <label>Service Rating</label>
+                    <label for="serviceRating">Service Rating</label>
                     <div class="rating-stars">
                         <i class="far fa-star" data-rating="1"></i>
                         <i class="far fa-star" data-rating="2"></i>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Service Type</label>
+                    <label for="srviceType">Service Type</label>
                     <div class="service-types">
                         <label><input type="radio" name="serviceType" value="residential"> Residential</label>
                         <label><input type="radio" name="serviceType" value="commercial"> Commercial</label>
@@ -55,19 +55,22 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address" required>
                 </div>
 
                 <div class="form-group">
-                    <textarea placeholder="Your Feedback" rows="6" required></textarea>
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" placeholder="Your Feedback" rows="6" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Would you recommend us?</label>
+                    <label for="recommend">Would you recommend us?</label>
                     <div class="recommend-options">
                         <label><input type="radio" name="recommend" value="yes"> Definitely Yes!</label>
                         <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
