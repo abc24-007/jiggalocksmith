@@ -79,13 +79,13 @@ body {
     padding: 15px 0;
 }
 
-.logo img {
+.logo-container {
     height: auto;
     width: 180px;
 }
 
 .logo img {
-    width: 100%;
+    width: 180%;
     height: auto;
     max-height: 80px; /* Controls maximum height */
     object-fit: contain; /* Ensures proper scaling */
