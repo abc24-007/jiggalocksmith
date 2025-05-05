@@ -23,6 +23,10 @@ body {
     color: var(--text-color);
 }
 
+ html {
+  scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -82,12 +86,14 @@ body {
 .logo-container {
     height: auto;
     width: 180px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    width: 180%;
+    width: 100%;
     height: auto;
-    max-height: 80px; /* Controls maximum height */
+    max-height: 60px; /* Controls maximum height */
     object-fit: contain; /* Ensures proper scaling */
 }
 
@@ -127,24 +133,25 @@ body {
 }
 
 .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
+   cursor: pointer;
+
 }
 
 .bar {
-    display: block;
-    width: 25px;
+    width: 100px;
     height: 3px;
-    margin: 5px auto;
     background: var(--primary-color);
     transition: var(--transition);
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
+    margin-top: 120px;
     padding: 100px 0;
     background: linear-gradient(rgba(255,255,255,0.9), 
                 url('images/hero-bg.jpg') center/cover;
@@ -154,7 +161,9 @@ body {
 .hero .container {
     display: flex;
     align-items: center;
-    gap: 50px;
+    padding: 40px 0;
+    justify-content: space-between;
+
 }
 
 .hero-content {
