@@ -1,4 +1,102 @@
-<label><input type="radio" name="recommend" value="no"> Not Sure</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Provide feedback about JIGGAlocksmiths services">
+    <title>Feedback - JIGGAlocksmiths</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="contact-bar">
+        <div class="container">
+            <div class="contact-info">
+                <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
+                <p><i class="fas fa-phone"></i> 267-747-5466 (JIGGA-LOCK)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="" alt="JIGGAlocksmiths Logo">
+                </a>
+
+                <button class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                 
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li class="cta"><a href="tel:2677475466" class="btn">Call Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="feedback-section">
+        <div class="container">
+            <div class="feedback-container">
+                <h1>Share Your Experience</h1>
+                <form id="feedbackForm" action="#" method="post">
+                    <div class="form-group">
+                        <label for="serviceRating">Service Rating</label>
+                        <div class="rating-stars">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Service Type</label>
+                        <div class="service-types">
+                            <label><input type="radio" name="serviceType" value="residential" required> Residential</label>
+                            <label><input type="radio" name="serviceType" value="commercial"> Commercial</label>
+                            <label><input type="radio" name="serviceType" value="automotive"> Automotive</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" placeholder="Your Feedback" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Would you recommend us?</label>
+                        <div class="recommend-options">
+                            <label><input type="radio" name="recommend" value="yes" required> Definitely Yes!</label>
+                            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+                            <label><input type="radio" name="recommend" value="no"> Not Sure</label>
                         </div>
                     </div>
 
@@ -31,7 +129,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p><i class="fas fa-phone"></i> 267-747-5466</p>
+                    <p><i class="fas fa-phone"></i> 267-747-54661</p>
                     <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
                 </div>
@@ -45,4 +143,5 @@
     <script src="js/script.js"></script>
     <script src="js/feedback.js"></script>
 </body>
-</html>
+</html>         
+                                     
