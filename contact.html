@@ -3,98 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact JIGGAlocksmiths - 24/7 emergency locksmith services">
     <title>Contact Us - JIGGAlocksmiths</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo">
-             <!-- Hamburger Icon -->
-    <button class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <!-- Top Contact Bar -->
+    <div class="contact-bar">
+        <div class="container">
+            <div class="contact-info">
+                <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
+                <p><i class="fas fa-phone"></i> 267-747-5466 (JIGGA-LOCK)</p>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="JIGGAlocksmiths Logo">
+                </a>
+
+                <button class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                 
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li class="cta"><a href="tel:2677475466" class="btn">Call Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main class="contact-section">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Visit Us</h3>
-                    <p>Mmopane, Kweneng District<br>Botswana</p>
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Visit Us</h3>
+                        <p>Mmopane, Kweneng District<br>Botswana</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>Emergency: <a href="tel:+2677475466">267-747-5466</a><br>Office: <a href="tel:+2677475466">267-747-5466</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p>Emergency: <a href="tel:+26777905806">26777905806</a><br>Office: <a href="tel:+26774754661">26774754661</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                <div class="contact-form">
+                    <h2>Quick Contact Form</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Select Service Needed</option>
+                                <option value="emergency">Emergency Lockout</option>
+                                <option value="duplication">Key Duplication</option>
+                                <option value="repair">Lock Repair</option>
+                                <option value="ignition">Ignition Repair</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="contact-form">
-                <h2>Quick Contact Form</h2>
-                <form action="#">
-                    <div class="form-group">
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Select Service Needed</option>
-                            <option>Emergency Lockout</option>
-                            <option>Key Duplication</option>
-                            <option>Lock Repair</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Mmopane,Kweneng+District,Botswana&output=embed" 
+                        frameborder="0" 
+                        style="border:0"
+                        allowfullscreen
+                        aria-label="Map of JIGGAlocksmiths location">
+                </iframe>
             </div>
-        </div>
-
-        <div class="map-container">
-            <iframe src="https://maps.google.com/maps?q=Mmopane, Kweneng Distric&output=embed" 
-                    frameborder="0" 
-                    style="border:0"
-                    allowfullscreen>
-            </iframe>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-      <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
+                    <p>Your trusted 24/7 locksmith service</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 267-747-5466</p>
+                    <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
