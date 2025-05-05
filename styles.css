@@ -58,7 +58,7 @@ html {
 
 /* ===== HEADER & NAVIGATION ===== */
 .contact-bar {
-  background: linear-gradient(rgba(255,102,0,0.9),rgba(255,102,0,0.9)), url('images/logo-small.png') no-repeat left center;
+  background: linear-gradient(rgba(255,102,0,0.9),rgba(255,102,0,0.9)), url('IMG_2990.png') no-repeat left center;
   background-size: auto 70%;
   background-blend-mode: overlay;
   color: var(--light);
