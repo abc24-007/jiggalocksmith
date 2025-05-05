@@ -1,91 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - JIGGAlocksmiths</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo">
-             <!-- Hamburger Icon -->
-    <button class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="feedback-section">
-        <div class="feedback-container">
-            <h1>Share Your Experience</h1>
-            <form id="feedbackForm" action="#" method="post">
-                <div class="form-group">
-                    <label for="serviceRating">Service Rating</label>
-                    <div class="rating-stars">
-                        <i class="far fa-star" data-rating="1"></i>
-                        <i class="far fa-star" data-rating="2"></i>
-                        <i class="far fa-star" data-rating="3"></i>
-                        <i class="far fa-star" data-rating="4"></i>
-                        <i class="far fa-star" data-rating="5"></i>
+<label><input type="radio" name="recommend" value="no"> Not Sure</label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="srviceType">Service Type</label>
-                    <div class="service-types">
-                        <label><input type="radio" name="serviceType" value="residential"> Residential</label>
-                        <label><input type="radio" name="serviceType" value="commercial"> Commercial</label>
-                        <label><input type="radio" name="serviceType" value="automotive"> Automotive</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Email Address" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="feedback">Your Feedback</label>
-                    <textarea id="feedback" placeholder="Your Feedback" rows="6" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="recommend">Would you recommend us?</label>
-                    <div class="recommend-options">
-                        <label><input type="radio" name="recommend" value="yes"> Definitely Yes!</label>
-                        <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
-                        <label><input type="radio" name="recommend" value="no"> Not Sure</label>
-                    </div>
-                </div>
-
-                <button type="submit" class="cta-button">Submit Feedback</button>
-            </form>
+                    <button type="submit" class="cta-button">Submit Feedback</button>
+                </form>
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
+                    <p>Your trusted 24/7 locksmith service</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 267-747-5466</p>
+                    <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
     <script src="js/feedback.js"></script>
 </body>
 </html>
