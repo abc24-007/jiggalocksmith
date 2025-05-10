@@ -93,31 +93,51 @@ if (document.querySelector('.rating-stars')) {
     });
   });
 }
-
-// Contact page form validation
-if (document.getElementById('contactForm')) {
-  const contactForm = document.getElementById('contactForm');
-  
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent default form submission
-    let isValid = true;
-    const requiredFields = this.querySelectorAll('[required]');
-
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        field.style.borderColor = 'red';
-        isValid = false;
-      } else {
-        field.style.borderColor = '#ddd';
-      }
-    });
-
-    if (!isValid) {
-      alert('Please fill out all required fields.');
-    } else {
-      alert('Message sent! We will get back to you shortly.');
-      this.reset(); // Clear form fields after successful validation
+// Contact Bar Responsive Behavior
+    const contactInfo = document.querySelector('.contact-info');
+    if (contactInfo) {
+        function handleContactBarResize() {
+            const contactItems = document.querySelectorAll('.contact-info p');
+            const contactCta = document.querySelector('.contact-cta');
+            
+            if (window.innerWidth <= 576) {
+                // Mobile view
+                contactItems.forEach(item => {
+                    const span = item.querySelector('span');
+                    if (span) span.style.display = 'none';
+                });
+                
+                if (contactCta) {
+                    const ctaSpan = contactCta.querySelector('span');
+                    if (ctaSpan) ctaSpan.style.display = 'none';
+                }
+            } else {
+                // Desktop view
+                contactItems.forEach(item => {
+                    const span = item.querySelector('span');
+                    if (span) span.style.display = 'inline';
+                });
+                
+                if (contactCta) {
+                    const ctaSpan = contactCta.querySelector('span');
+                    if (ctaSpan) ctaSpan.style.display = 'inline';
+                }
+            }
+        }
+        
+        // Initialize and add resize listener
+        handleContactBarResize();
+        window.addEventListener('resize', handleContactBarResize);
+        
+        // Add click-to-call functionality for mobile
+        if (window.innerWidth <= 576) {
+            document.querySelectorAll('.contact-info p').forEach(item => {
+                item.addEventListener('click', function() {
+                    if (this.querySelector('i').classList.contains('fa-phone')) {
+                        window.location.href = 'tel:26774754661';
+                    }
+                });
+            });
+        }
     }
-  });
-}
-
+});
