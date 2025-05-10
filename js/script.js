@@ -93,3 +93,31 @@ if (document.querySelector('.rating-stars')) {
     });
   });
 }
+
+// Contact page form validation
+if (document.getElementById('contactForm')) {
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default form submission
+    let isValid = true;
+    const requiredFields = this.querySelectorAll('[required]');
+
+    requiredFields.forEach(field => {
+      if (!field.value.trim()) {
+        field.style.borderColor = 'red';
+        isValid = false;
+      } else {
+        field.style.borderColor = '#ddd';
+      }
+    });
+
+    if (!isValid) {
+      alert('Please fill out all required fields.');
+    } else {
+      alert('Message sent! We will get back to you shortly.');
+      this.reset(); // Clear form fields after successful validation
+    }
+  });
+}
+
