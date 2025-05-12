@@ -20,11 +20,11 @@
 }
 
 body {
-    line-height: 1.7;
+    line-height: 1.9;
     color: var(--text-color);
     background-color: var(--light-color);
     overflow-x: hidden;
-    padding-top: 150px; /* Account for fixed header */
+    padding-top: 150px; 
 }
 
 html {
