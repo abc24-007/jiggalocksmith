@@ -1,44 +1,44 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  // --------------------------
+  // Handle Mobile Navigation
+  // --------------------------
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
 
-  // Toggle mobile menu
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-    // Toggle body scroll when menu is open
-    document.body.classList.toggle('no-scroll');
-  });
-
-  // Close menu when clicking a link
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      document.body.classList.remove('no-scroll');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
     });
-  });
 
-  // Smooth scrolling for anchor links
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  }
+
+  // --------------------------
+  // Smooth Scrolling
+  // --------------------------
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 
-  // Add active class to current page link
+  // --------------------------
+  // Highlight Active Page Link
+  // --------------------------
   const currentPage = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-menu a').forEach(link => {
     const linkPage = link.getAttribute('href').split('/').pop();
@@ -46,98 +46,115 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.add('active');
     }
   });
-});
 
-// Form validation for contact page
-if (document.getElementById('feedbackForm')) {
+  // --------------------------
+  // Feedback Form Logic
+  // --------------------------
   const feedbackForm = document.getElementById('feedbackForm');
-  
-  feedbackForm.addEventListener('submit', function(e) {
-    let isValid = true;
-    const requiredFields = this.querySelectorAll('[required]');
-    
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        field.style.borderColor = 'red';
-        isValid = false;
-      } else {
-        field.style.borderColor = '#ddd';
-      }
-    });
-    
-    if (!isValid) {
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Please fill out all required fields.');
-    }
-  });
-}
+      let isValid = true;
 
-// Star rating functionality for feedback page
-if (document.querySelector('.rating-stars')) {
-  const stars = document.querySelectorAll('.rating-stars label');
-  
-  stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-      // Highlight all stars up to the clicked one
-      stars.forEach((s, i) => {
-        if (i <= index) {
-          s.style.color = '#FFD700';
+      const requiredFields = feedbackForm.querySelectorAll('[required]');
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'red';
+          isValid = false;
         } else {
-          s.style.color = '#ddd';
+          field.style.borderColor = '#ccc';
         }
       });
-      
-      // Update hidden input value
-      document.querySelector('.rating-stars input[type="radio"]:checked')?.removeAttribute('checked');
-      document.getElementById(`star${index + 1}`).checked = true;
+
+      if (!isValid) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      const formData = new FormData(feedbackForm);
+      const feedbackData = Object.fromEntries(formData.entries());
+      console.log("Feedback submitted:", feedbackData);
+      alert("Thank you for your feedback!");
+      feedbackForm.reset();
     });
-  });
-}
-// Contact Bar Responsive Behavior
-    const contactInfo = document.querySelector('.contact-info');
-    if (contactInfo) {
-        function handleContactBarResize() {
-            const contactItems = document.querySelectorAll('.contact-info p');
-            const contactCta = document.querySelector('.contact-cta');
-            
-            if (window.innerWidth <= 576) {
-                // Mobile view
-                contactItems.forEach(item => {
-                    const span = item.querySelector('span');
-                    if (span) span.style.display = 'none';
-                });
-                
-                if (contactCta) {
-                    const ctaSpan = contactCta.querySelector('span');
-                    if (ctaSpan) ctaSpan.style.display = 'none';
-                }
-            } else {
-                // Desktop view
-                contactItems.forEach(item => {
-                    const span = item.querySelector('span');
-                    if (span) span.style.display = 'inline';
-                });
-                
-                if (contactCta) {
-                    const ctaSpan = contactCta.querySelector('span');
-                    if (ctaSpan) ctaSpan.style.display = 'inline';
-                }
-            }
+
+    // Star rating highlight logic
+    const stars = document.querySelectorAll('.rating-stars label');
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        stars.forEach((s, i) => {
+          s.style.color = i <= index ? '#FFD700' : '#ccc';
+        });
+        document.querySelector(`#star${index + 1}`).checked = true;
+      });
+    });
+  }
+
+  // --------------------------
+  // Contact Form Logic
+  // --------------------------
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let isValid = true;
+
+      const requiredFields = contactForm.querySelectorAll('[required]');
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'red';
+          isValid = false;
+        } else {
+          field.style.borderColor = '#ccc';
         }
-        
-        // Initialize and add resize listener
-        handleContactBarResize();
-        window.addEventListener('resize', handleContactBarResize);
-        
-        // Add click-to-call functionality for mobile
-        if (window.innerWidth <= 576) {
-            document.querySelectorAll('.contact-info p').forEach(item => {
-                item.addEventListener('click', function() {
-                    if (this.querySelector('i').classList.contains('fa-phone')) {
-                        window.location.href = 'tel:26774754661';
-                    }
-                });
-            });
-        }
+      });
+
+      if (!isValid) {
+        alert('Please complete all required fields.');
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+      const contactData = Object.fromEntries(formData.entries());
+      console.log("Contact form submitted:", contactData);
+      alert("Thank you! Your message has been received.");
+      contactForm.reset();
+    });
+  }
+
+  // --------------------------
+  // Contact Bar Responsive Behavior
+  // --------------------------
+  const contactInfo = document.querySelector('.contact-info');
+  if (contactInfo) {
+    function handleContactBarResize() {
+      const contactItems = contactInfo.querySelectorAll('p');
+      const contactCta = document.querySelector('.contact-cta');
+
+      const show = window.innerWidth > 576;
+      contactItems.forEach(item => {
+        const span = item.querySelector('span');
+        if (span) span.style.display = show ? 'inline' : 'none';
+      });
+
+      if (contactCta) {
+        const ctaSpan = contactCta.querySelector('span');
+        if (ctaSpan) ctaSpan.style.display = show ? 'inline' : 'none';
+      }
     }
+
+    handleContactBarResize();
+    window.addEventListener('resize', handleContactBarResize);
+
+    // Mobile click-to-call
+    if (window.innerWidth <= 576) {
+      document.querySelectorAll('.contact-info p').forEach(item => {
+        item.addEventListener('click', function () {
+          if (this.querySelector('i')?.classList.contains('fa-phone')) {
+            window.location.href = 'tel:26774754661';
+          }
+        });
+      });
+    }
+  }
 });
