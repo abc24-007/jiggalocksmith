@@ -31,6 +31,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+}
+::selection {
+  background: #FF6600;
+  color: #ffffff;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -524,6 +539,63 @@ html {
 .service-card p {
     color: var(--text-color);
     line-height: 1.6;
+}
+
+    /* EMERGENCY LOCKOUT */
+#emergency-lockout .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E9E9E9;
+}
+#emergency-lockout .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#emergency-lockout .image-container {
+  width: 60%;
+}
+#emergency-lockout .image-container img {
+  width: 100%;
+}
+#emergency-lockout .content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 50%;
+}
+#emergency-lockout h1 {
+    position: relative; /* Essential for positioning the pseudo-element */
+    padding: 20px;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 5px;
+    color: #313131;
+}
+#emergency-lockouth1::after {
+  content: "";
+  display: block;
+  margin: 0 auto; /* Centers the pseudo-element */
+  width: 30%; /* Half the width of the h1 element */
+  height: 2px; /* The thickness of your bottom border */
+  background-color: #ff6600; /* The color of your bottom border */
+  position: absolute;
+  bottom: 0; /* Aligns the pseudo-element to the bottom of the h1 */
+  left: 0.9;
+  right: 0.9;
+}
+#emergency-lockout p {
+    padding: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 5px;
+    color: #313131;
+    font-family: 'Mulish', sans-serif;
+    width: 70%;
 }
 
 /* ===== FOOTER ===== */
