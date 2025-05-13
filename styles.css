@@ -344,7 +344,136 @@ html {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
+/* HEADER */
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6600;
+  width: 100%;
+  height: 800px;
+}
+#header .container .content {
+  color: white;
+  width: 46%;
+  margin: 200px 0 30px 110px;
+  z-index: 1;
+  position:static;
+}
+#header .container .content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+}
+#header .container .content h1::after {
+  content: ""; /* Add empty content */
+  position: absolute; /* Set position to absolute */
+  bottom: -4px; /* Position the pseudo-element at the bottom of the header */
+  left: 8px; /* Position the pseudo-element at the left corner */
+  width: 50px; /* Width of the pseudo-element */
+  height: 2px; /* Height of the pseudo-element */
+  background-color: white; /* Color of the line */
+}
+#header .container .content p {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Mulish", sans-serif;
+  padding: 5px;
+  margin: 50px 10px 10px 10px;
+}
+
+#header .container .image-container {
+  width: 63%;
+  z-index: 1;
+  margin-top: 200px;
+
+}
+#header .container .image-container img {
+  width: 800px;
+  z-index: 1;
+  position: relative;
+}
+
+
 /* ===== SERVICES SECTION ===== */
+#services .container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+#services .content {
+  display: flex;
+  align-items: center;
+  margin: 100px;
+  flex-direction: column;
+}
+#services h1 {
+  position: relative; /* Essential for positioning the pseudo-element */
+  padding: 20px;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 5px;
+  color: #313131;
+}
+#services h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto; /* Centers the pseudo-element */
+  width: 20%; /* Half the width of the h1 element */
+  height: 2px; /* The thickness of your bottom border */
+  background-color: #ff6600; /* The color of your bottom border */
+  position: absolute;
+  bottom: 0; /* Aligns the pseudo-element to the bottom of the h1 */
+  left: 0;
+  right: 0;
+}
+#services .advantage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#services .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 35%;
+  padding: 10px;
+}
+#services .bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+#services i {
+  font-size: 45px;
+  color: #ff6600;
+}
+#services h3 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #333333;
+  margin: 5px;
+  width: 100%;
+}
+#services p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #333333;
+  margin: 10px;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+
 .services-section {
     padding: 100px 20px;
     background: var(--light-color);
