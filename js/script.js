@@ -1,197 +1,171 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // --------------------------
-  // Handle Mobile Navigation
-  // --------------------------
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
+    // --------------------------
+    // Mobile Navigation Handling
+    // --------------------------
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-      document.body.classList.toggle('no-scroll');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('no-scroll');
+            });
+        });
+    }
+
+    // --------------------------
+    // Smooth Scrolling
+    // --------------------------
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 
+    // --------------------------
+    // Active Page Highlighting
+    // --------------------------
+    const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-      });
-    });
-  }
-
-  // --------------------------
-  // Smooth Scrolling
-  // --------------------------
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // --------------------------
-  // Highlight Active Page Link
-  // --------------------------
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop();
-    if (currentPage === linkPage) {
-      link.classList.add('active');
-    }
-  });
-
-  // --------------------------
-  // Feedback Form Logic
-  // --------------------------
-  const feedbackForm = document.getElementById('feedbackForm');
-  if (feedbackForm) {
-    feedbackForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      let isValid = true;
-
-      const requiredFields = feedbackForm.querySelectorAll('[required]');
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          field.style.borderColor = 'red';
-          isValid = false;
-        } else {
-          field.style.borderColor = '#ccc';
+        if (link.pathname === currentPath) {
+            link.classList.add('active');
         }
-      });
-
-      if (!isValid) {
-        alert('Please fill out all required fields.');
-        return;
-      }
-
-      const formData = new FormData(feedbackForm);
-      const feedbackData = Object.fromEntries(formData.entries());
-      console.log("Feedback submitted:", feedbackData);
-      alert("Thank you for your feedback!");
-      feedbackForm.reset();
     });
 
-    // Star rating highlight logic
-    const stars = document.querySelectorAll('.rating-stars label');
-    stars.forEach((star, index) => {
-      star.addEventListener('click', () => {
-        stars.forEach((s, i) => {
-          s.style.color = i <= index ? '#FFD700' : '#ccc';
+    // --------------------------
+    // Feedback Form Handling
+    // --------------------------
+    const feedbackForm = document.getElementById('feedbackForm');
+    if (feedbackForm) {
+        // Star Rating Interaction
+        const stars = feedbackForm.querySelectorAll('.rating-stars label');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    s.style.color = i <= index ? '#FFD700' : '#ccc';
+                });
+            });
         });
-        document.querySelector(`#star${index + 1}`).checked = true;
-      });
-    });
-  }
 
-  // --------------------------
-  // Contact Form Logic
-  // --------------------------
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      let isValid = true;
+        // Form Validation
+        feedbackForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
 
-      const requiredFields = contactForm.querySelectorAll('[required]');
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          field.style.borderColor = 'red';
-          isValid = false;
-        } else {
-          field.style.borderColor = '#ccc';
+            // Validate required fields
+            this.querySelectorAll('[required]').forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ff4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (isValid) {
+                // Submit form data
+                const formData = new FormData(this);
+                console.log('Feedback submitted:', Object.fromEntries(formData));
+                this.reset();
+                stars.forEach(star => star.style.color = '#ccc');
+                showToast('Thank you for your feedback!');
+            } else {
+                showToast('Please fill all required fields', 'error');
+            }
+        });
+    }
+
+    // --------------------------
+    // Contact Form Handling
+    // --------------------------
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            this.querySelectorAll('[required]').forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ff4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (isValid) {
+                const formData = new FormData(this);
+                console.log('Contact form submitted:', Object.fromEntries(formData));
+                this.reset();
+                showToast('Message sent successfully!');
+            } else {
+                showToast('Please fill all required fields', 'error');
+            }
+        });
+    }
+
+    // --------------------------
+    // Contact Bar Behavior
+    // --------------------------
+    const contactBar = document.querySelector('.contact-bar');
+    if (contactBar) {
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const isScrollingDown = currentScroll > lastScroll;
+            
+            if (window.innerWidth > 868) {
+                contactBar.style.top = isScrollingDown && currentScroll > 100 
+                    ? '-60px' 
+                    : '0';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Mobile tap-to-call
+        if (window.innerWidth <= 768) {
+            contactBar.querySelectorAll('[data-phone]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    window.location.href = 'tel:26774754661';
+                });
+            });
         }
-      });
-
-      if (!isValid) {
-        alert('Please complete all required fields.');
-        return;
-      }
-
-      const formData = new FormData(contactForm);
-      const contactData = Object.fromEntries(formData.entries());
-      console.log("Contact form submitted:", contactData);
-      alert("Thank you! Your message has been received.");
-      contactForm.reset();
-    });
-  }
-
-  // --------------------------
-  // Contact Bar Responsive Behavior
-  // --------------------------
-  const contactInfo = document.querySelector('.contact-info');
-  if (contactInfo) {
-    function handleContactBarResize() {
-      const contactItems = contactInfo.querySelectorAll('p');
-      const contactCta = document.querySelector('.contact-cta');
-
-      const show = window.innerWidth > 576;
-      contactItems.forEach(item => {
-        const span = item.querySelector('span');
-        if (span) span.style.display = show ? 'inline' : 'none';
-      });
-
-      if (contactCta) {
-        const ctaSpan = contactCta.querySelector('span');
-        if (ctaSpan) ctaSpan.style.display = show ? 'inline' : 'none';
-      }
     }
 
-    handleContactBarResize();
-    window.addEventListener('resize', handleContactBarResize);
-
-    // Mobile click-to-call
-    if (window.innerWidth <= 576) {
-      document.querySelectorAll('.contact-info p').forEach(item => {
-        item.addEventListener('click', function () {
-          if (this.querySelector('i')?.classList.contains('fa-phone')) {
-            window.location.href = 'tel:26774754661';
-          }
-        });
-      });
+    // --------------------------
+    // Toast Notification
+    // --------------------------
+    function showToast(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
     }
-  }
 });
-
-const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
-const phoneBtn = document.querySelector(".phone-btn");
-menuBtn.onclick = () => {
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-};
-cancelBtn.onclick = () => {
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-};
-
-let scrollTimeout;
-
-window.onscroll = function () {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(function () {
-    var currentScrollPos = window.pageYOffset;
-    var contactRow = document.querySelector(".contact-row");
-    var screenWidth = window.innerWidth; // Get the screen width
-
-    if (screenWidth > 860) { // Only execute this code if screen width is greater than 860px
-      if (currentScrollPos < 36) {
-        contactRow.style.display = "block";
-        contactRow.classList.remove("hide");
-        navbar.style.top = "60px";
-      } else {
-        contactRow.style.display = "none";
-        contactRow.classList.add("hide");
-        navbar.style.top = "0";
-      }
-    }
-  }, 100); // Increase the debounce delay for smoother scrolling
-};
-
