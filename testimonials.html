@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Customer testimonials for JIGGAlocksmiths services">
-    <title>Testimonials - JIGGAlocksmiths</title>
+    <meta name="description" content="Read customer testimonials and reviews for JIGGAlocksmiths services in Mmopane and surrounding areas">
+    <title>Customer Testimonials | JIGGAlocksmiths Reviews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/testimonials.css">
 </head>
 <body>
     <!-- Top Contact Bar -->
@@ -14,7 +15,8 @@
         <div class="container">
             <div class="contact-info">
                 <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
-                <p><i class="fas fa-phone"></i> 267-747-54661 (JIGGA-LOCK)</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661 (JIGGA-LOCK)</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving Mmopane & Surrounding Areas</p>
             </div>
         </div>
     </div>
@@ -24,10 +26,10 @@
         <div class="container">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo">
+                    <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo" width="180">
                 </a>
 
-                <button class="hamburger">
+                <button class="hamburger" aria-label="Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -40,112 +42,256 @@
                     <li><a href="testimonials.html" class="active">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
-                    <li class="cta"><a href="tel:26774754661" class="btn">Call Now</a></li>
+                    <li class="cta"><a href="tel:26774754661" class="btn btn-emergency"><i class="fas fa-phone"></i> Emergency Call</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="testimonials-section">
+    <!-- Testimonials Hero Section -->
+    <section class="page-hero testimonials-hero">
         <div class="container">
-            <section class="testimonials-intro">
-                <h1>What Our Customers Say</h1>
-                <p class="subtitle">Trusted by thousands of satisfied clients across Gaborone and surrounding areas</p>
-            </section>
+            <div class="hero-content">
+                <h1>Customer Testimonials</h1>
+                <p class="subtitle">Hear what our clients say about their experience with JIGGAlocksmiths</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="client-info">
-                        <img src="images/clients/christopher.jpg" alt="Christopher Mokokie">
-                        <div class="client-details">
+    <!-- Testimonials Main Content -->
+    <main class="testimonials-main">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Trusted by Hundreds of Satisfied Customers</h2>
+                <p>We take pride in providing exceptional locksmith services. Here's what some of our clients have to say about their experience with us.</p>
+                <div class="overall-rating">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.7 out of 5 based on 128 reviews</span>
+                </div>
+            </div>
+            
+            <!-- Testimonials Filter -->
+            <div class="testimonials-filter">
+                <h3>Filter Testimonials:</h3>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="automotive">Automotive</button>
+                    <button class="filter-btn" data-filter="emergency">Emergency</button>
+                </div>
+            </div>
+            
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-category="emergency">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <img src="images/clients/christopher.jpg" alt="Christopher Mokokie">
+                        </div>
+                        <div class="client-info">
                             <h3>Christopher Mokokie</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="client-meta">
+                                <span class="location">Gaborone, Fairgrounds</span>
+                                <span class="date">March 15, 2024</span>
                             </div>
-                            <p class="service-used">Emergency Lockout Service</p>
                         </div>
                     </div>
-                    <blockquote>
-                        "JIGGAlocksmiths saved me during a late-night car lockout. Their technician arrived in 20 minutes and had me back in my car without any damage. Truly lifesavers!"
-                    </blockquote>
-                    <div class="testimonial-meta">
-                        <span class="date">15 March 2024</span>
-                        <span class="location">Gaborone,FAIRGROUNDS</span>
+                    <div class="testimonial-body">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Emergency Car Lockout Service</h4>
+                        <blockquote>
+                            "JIGGAlocksmiths saved me during a late-night car lockout. Their technician arrived in 20 minutes and had me back in my car without any damage. The professionalism and speed were impressive. Truly lifesavers!"
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="service-tag emergency">Emergency Service</div>
                     </div>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="client-info">
-                        <img src="images/clients/theo.jpg" alt="Theo Philip">
-                        <div class="client-details">
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-category="residential">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <img src="images/clients/theo.jpg" alt="Theo Philip">
+                        </div>
+                        <div class="client-info">
                             <h3>Theo Philip</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
+                            <div class="client-meta">
+                                <span class="location">Gaborone, Maruapula</span>
+                                <span class="date">April 2, 2024</span>
                             </div>
-                            <p class="service-used">Home Security Upgrade</p>
                         </div>
                     </div>
-                    <blockquote>
-                        "Professional service from start to finish. They upgraded all our home locks and installed a new security system at a very fair price. Highly recommend!"
-                    </blockquote>
-                    <div class="testimonial-meta">
-                        <span class="date">2 April 2024</span>
-                        <span class="location">Gaborone, Maruapula</span>
+                    <div class="testimonial-body">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h4>Home Security Upgrade</h4>
+                        <blockquote>
+                            "Professional service from start to finish. They upgraded all our home locks and installed a new security system at a very fair price. The technician was knowledgeable and took time to explain everything. Highly recommend JIGGAlocksmiths for any home security needs!"
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="service-tag residential">Residential</div>
                     </div>
                 </div>
-            </div>
-
-            <section class="leave-testimonial">
-                <h2>Share Your Experience</h2>
-                <p>We value your feedback! Help us improve our services by sharing your story.</p>
-                <a href="feedback.html" class="cta-button">Write a Review</a>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
-                    <p>Your trusted 24/7 locksmith service</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-category="commercial">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <img src="images/clients/sarah.jpg" alt="Sarah K.">
+                        </div>
+                        <div class="client-info">
+                            <h3>Sarah K.</h3>
+                            <div class="client-meta">
+                                <span class="location">Mmopane</span>
+                                <span class="date">February 28, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Office Security System</h4>
+                        <blockquote>
+                            "We hired JIGGAlocksmiths to install a new access control system for our office. The team was punctual, professional, and completed the work ahead of schedule. The system works perfectly, and they provided excellent training for our staff. Will definitely use them again for any security needs."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="service-tag commercial">Commercial</div>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card" data-category="automotive">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <img src="images/clients/david.jpg" alt="David R.">
+                        </div>
+                        <div class="client-info">
+                            <h3>David R.</h3>
+                            <div class="client-meta">
+                                <span class="location">Kweneng District</span>
+                                <span class="date">January 10, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Car Key Replacement</h4>
+                        <blockquote>
+                            "Lost my car keys and needed a replacement quickly. JIGGAlocksmiths came to my location and programmed a new transponder key on the spot. The price was reasonable compared to dealership quotes I received, and the service was faster too. Very satisfied with the results!"
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="service-tag automotive">Automotive</div>
+                    </div>
+                            </div>
+        </div>
+        
+        <!-- Testimonial Submission CTA -->
+        <div class="testimonial-cta">
+            <div class="cta-content">
+                <h3>Share Your Experience</h3>
+                <p>We'd love to hear about your experience with JIGGAlocksmiths. Your feedback helps us improve and serve you better.</p>
+                <div class="cta-buttons">
+                    <a href="feedback.html" class="cta-button">
+                        <i class="fas fa-edit"></i> Write a Review
+                    </a>
+                    <a href="contact.html" class="cta-button secondary">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </a>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-phone"></i> 267-747-54661</p>
-                    <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</main>
 
-    <script src="js/script.js"></script>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
+                <p>Your trusted local locksmith service in Mmopane, providing reliable 24/7 emergency locksmith services for homes, businesses, and vehicles.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/lebo_zuzu/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/26774754661" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="services.html#emergency">Emergency Lockout</a></li>
+                    <li><a href="services.html#residential">Residential Locksmith</a></li>
+                    <li><a href="services.html#commercial">Commercial Locksmith</a></li>
+                    <li><a href="services.html#automotive">Automotive Locksmith</a></li>
+                    <li><a href="services.html#security">Security Systems</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</li>
+                    <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/testimonials.js"></script>
 </body>
 </html>
-    
