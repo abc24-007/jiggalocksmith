@@ -15,7 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -804,3 +804,26 @@ footer {
         width: 150px;
     }
 }
+
+      /* FOOTERS RESPONSIVNESS */
+  footer {
+    padding: 25px;
+  }
+  footer .container .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer img {
+    margin: 15px;
+  }
+  footer button {
+    display: block;
+  }
+  footer .container .content .logo-container .social-icons i {
+    font-size: 30px;
+  }
+  footer .container .content .info-box {
+    margin: 20px;
+  }
+}
+
