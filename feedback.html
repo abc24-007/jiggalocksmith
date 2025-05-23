@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Provide feedback about JIGGAlocksmiths services">
-    <title>Feedback - JIGGAlocksmiths</title>
+    <meta name="description" content="Share your feedback about JIGGAlocksmiths services to help us improve">
+    <title>Feedback | JIGGAlocksmiths Customer Experience</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/feedback.css">
 </head>
 <body>
     <!-- Top Contact Bar -->
@@ -14,7 +15,8 @@
         <div class="container">
             <div class="contact-info">
                 <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
-                <p><i class="fas fa-phone"></i> 267-747-54661 (JIGGA-LOCK)</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661 (JIGGA-LOCK)</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving Mmopane & Surrounding Areas</p>
             </div>
         </div>
     </div>
@@ -24,10 +26,10 @@
         <div class="container">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo">
+                    <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo" width="180">
                 </a>
 
-                <button class="hamburger">
+                <button class="hamburger" aria-label="Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -40,102 +42,212 @@
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="feedback.html" class="active">Feedback</a></li>
-                    <li class="cta"><a href="tel:26774754661" class="btn">Call Now</a></li>
+                    <li class="cta"><a href="tel:26774754661" class="btn btn-emergency"><i class="fas fa-phone"></i> Emergency Call</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="feedback-section">
+    <!-- Feedback Hero Section -->
+    <section class="page-hero feedback-hero">
         <div class="container">
-            <div class="feedback-container">
+            <div class="hero-content">
                 <h1>Share Your Experience</h1>
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="serviceRating">Service Rating</label>
+                <p class="subtitle">Your feedback helps us improve our services and serve you better</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Main Content -->
+    <main class="feedback-main">
+        <div class="container">
+            <div class="feedback-intro">
+                <h2>We Value Your Opinion</h2>
+                <p>At JIGGAlocksmiths, we're committed to providing exceptional service. Please take a moment to share your experience with us.</p>
+                <div class="feedback-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-comment-alt"></i>
+                        <p>Help us improve our services</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-thumbs-up"></i>
+                        <p>Recognize outstanding team members</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Suggest new services or improvements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="feedbackForm" class="feedback-form">
+                <!-- Rating Section -->
+                <div class="form-section">
+                    <h3>How would you rate your overall experience?</h3>
+                    <div class="rating-container">
                         <div class="rating-stars">
-                            <input type="radio" id="star5" name="rating" value="5">
-                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" aria-label="5 stars"><i class="fas fa-star"></i></label>
                             <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <label for="star4" aria-label="4 stars"><i class="fas fa-star"></i></label>
                             <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <label for="star3" aria-label="3 stars"><i class="fas fa-star"></i></label>
                             <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <label for="star2" aria-label="2 stars"><i class="fas fa-star"></i></label>
                             <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1"><i class="fas fa-star"></i></label>
+                            <label for="star1" aria-label="1 star"><i class="fas fa-star"></i></label>
+                        </div>
+                        <div class="rating-labels">
+                            <span>Poor</span>
+                            <span>Fair</span>
+                            <span>Good</span>
+                            <span>Very Good</span>
+                            <span>Excellent</span>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label>Service Type</label>
-                        <div class="service-types">
-                            <label><input type="radio" name="serviceType" value="residential" required> Residential</label>
-                            <label><input type="radio" name="serviceType" value="commercial"> Commercial</label>
-                            <label><input type="radio" name="serviceType" value="automotive"> Automotive</label>
+                </div>
+                
+                <!-- Service Details -->
+                <div class="form-section">
+                    <h3>Tell us about the service you received</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType">Service Type *</label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">Select service type</option>
+                                <option value="emergency">Emergency Lockout</option>
+                                <option value="residential">Residential Locksmith</option>
+                                <option value="commercial">Commercial Locksmith</option>
+                                <option value="automotive">Automotive Locksmith</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceDate">Approximate Date of Service *</label>
+                            <input type="date" id="serviceDate" name="serviceDate" required>
                         </div>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="technician">Technician Name (if known)</label>
+                        <input type="text" id="technician" name="technician" placeholder="Name of your technician">
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                
+                <!-- Feedback Details -->
+                <div class="form-section">
+                    <h3>Your Feedback</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="feedback">Your Feedback</label>
-                        <textarea id="feedback" name="feedback" placeholder="Your Feedback" rows="6" required></textarea>
+                        <label for="feedback">Your Feedback *</label>
+                        <textarea id="feedback" name="feedback" rows="6" required placeholder="Please describe your experience with JIGGAlocksmiths..."></textarea>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label>Would you recommend us?</label>
+                        <label>Would you recommend our services to others? *</label>
                         <div class="recommend-options">
-                            <label><input type="radio" name="recommend" value="yes" required> Definitely Yes!</label>
-                            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
-                            <label><input type="radio" name="recommend" value="no"> Not Sure</label>
+                            <label>
+                                <input type="radio" name="recommend" value="yes" required>
+                                <span class="radio-custom"></span>
+                                Definitely Yes
+                            </label>
+                            <label>
+                                <input type="radio" name="recommend" value="maybe">
+                                <span class="radio-custom"></span>
+                                Maybe
+                            </label>
+                            <label>
+                                <input type="radio" name="recommend" value="no">
+                                <span class="radio-custom"></span>
+                                Probably Not
+                            </label>
                         </div>
                     </div>
-
-                    <button type="submit" class="cta-button">Submit Feedback</button>
-                </form>
+                </div>
+                
+                <!-- Submission -->
+                <div class="form-submit">
+                    <button type="submit" class="cta-button">
+                        <i class="fas fa-paper-plane"></i> Submit Feedback
+                    </button>
+                    <p class="form-note">By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a></p>
+                </div>
+            </form>
+            
+            <!-- Testimonial Invitation -->
+            <div class="testimonial-invite">
+                <div class="invite-content">
+                    <h3>Want to share your experience publicly?</h3>
+                    <p>Consider leaving a testimonial that we can feature on our website to help others learn about our services.</p>
+                    <a href="testimonials.html" class="cta-button secondary">
+                        <i class="fas fa-comment"></i> Write a Testimonial
+                    </a>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-about">
                     <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
-                    <p>Your trusted 24/7 locksmith service</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <p>Your trusted local locksmith service in Mmopane, providing reliable 24/7 emergency locksmith services for homes, businesses, and vehicles.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/26774754661" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-phone"></i> 267-747-54661</p>
-                    <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#emergency">Emergency Lockout</a></li>
+                        <li><a href="services.html#residential">Residential Locksmith</a></li>
+                        <li><a href="services.html#commercial">Commercial Locksmith</a></li>
+                        <li><a href="services.html#automotive">Automotive Locksmith</a></li>
+                        <li><a href="services.html#security">Security Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -143,5 +255,4 @@
     <script src="js/script.js"></script>
     <script src="js/feedback.js"></script>
 </body>
-</html>         
-                                     
+</html>
