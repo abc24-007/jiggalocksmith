@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About JIGGAlocksmiths - Your trusted security partner since 2008">
-    <title>About Us - JIGGAlocksmiths</title>
+    <meta name="description" content="Learn about JIGGAlocksmiths - Your trusted local locksmith service in Mmopane with certified professionals and 24/7 emergency services.">
+    <title>About JIGGAlocksmiths | Professional Locksmith Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +17,8 @@
         <div class="container">
             <div class="contact-info">
                 <p><i class="fas fa-clock"></i> 24/7 Emergency Service</p>
-                <p><i class="fas fa-phone"></i> 267-747-54661 (JIGGA-LOCK)</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661 (JIGGA-LOCK)</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving Mmopane & Surrounding Areas</p>
             </div>
         </div>
     </div>
@@ -24,10 +28,10 @@
         <div class="container">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="IMG_2990.png" alt="JIGGAlocksmiths Logo">
+                    <img src="L.png" alt="JIGGAlocksmiths Logo" width="180">
                 </a>
 
-                <button class="hamburger">
+                <button class="hamburger" aria-label="Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -40,94 +44,274 @@
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
-                    <li class="cta"><a href="tel:26774754661" class="btn">Call Now</a></li>
+                    <li class="cta"><a href="tel:26774754661" class="btn btn-emergency"><i class="fas fa-phone"></i> Emergency Call</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container">
-        <section class="about-section">
-            <h1>Your Trusted Security Partner Since 2008</h1>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">With over 15 years of experience, JIGGAlocksmiths has been the preferred choice for comprehensive security solutions in our community.</p>
-                    <div class="stats-grid">
-                        <div class="service-card">
-                            <i class="fas fa-lock"></i>
-                            <h3>15,000+</h3>
-                            <p>Homes Secured</p>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About JIGGAlocksmiths</h1>
+                <p class="subtitle">Your trusted local locksmith service in Mmopane</p>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <span>About Us</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2020, JIGGAlocksmiths began as a small local business with a mission to provide reliable, affordable locksmith services to the Mmopane community. What started as a one-person operation has grown into a trusted team of certified locksmiths serving residential and commercial clients throughout the Kweneng District.</p>
+                    <p>Our founder, Lebo Mazongo, recognized the need for honest, professional locksmith services after experiencing poor service from other providers. He set out to create a company that would prioritize customer satisfaction, quick response times, and quality workmanship above all else.</p>
+                    <div class="story-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Customers</span>
                         </div>
-                        <div class="service-card">
-                            <i class="fas fa-users"></i>
-                            <h3>98%</h3>
-                            <p>Customer Satisfaction</p>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Emergency Service</span>
                         </div>
-                        <div class="service-card">
-                            <i class="fas fa-clock"></i>
-                            <h3>24/7</h3>
-                            <p>Emergency Service</p>
+                        <div class="stat-item">
+                            <span class="stat-number">30min</span>
+                            <span class="stat-label">Avg. Response Time</span>
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/team.jpg" alt="JIGGAlocksmiths professional team">
+                <div class="story-image">
+                    <img src="images/team.jpg" alt="JIGGAlocksmiths team" loading="lazy">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="values-section">
-            <h2>Our Core Values</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Security First</h3>
-                    <p>We prioritize your safety through cutting-edge security solutions and quality craftsmanship.</p>
+    <!-- Our Values Section -->
+    <section class="our-values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We believe in honest pricing and transparent service. No hidden fees or unnecessary upsells.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Customer Focused</h3>
-                    <p>24/7 availability with rapid response times and transparent pricing.</p>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Reliability</h3>
+                    <p>When you call, we answer. Our 24/7 emergency service means we're always there when you need us.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Certified Experts</h3>
-                    <p>All technicians are licensed, insured, and background-checked.</p>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                    <p>Our locksmiths undergo continuous training to stay current with the latest security technologies.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We're proud to serve Mmopane and support local initiatives that make our community stronger.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="our-team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p class="section-subtitle">Certified professionals dedicated to your security</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/lebo.jpg" alt="Lebo Mazongo" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Lebo Mazongo</h3>
+                        <p class="position">Founder & Lead Locksmith</p>
+                        <p class="bio">With over 5 years of experience in locksmith services, Lebo founded JIGGAlocksmiths to provide reliable security solutions to his community.</p>
+                        <div class="member-contact">
+                            <a href="tel:26774754661"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:lebomazongo55@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/technician1.jpg" alt="Kabo Motsumi" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Kabo Motsumi</h3>
+                        <p class="position">Senior Locksmith</p>
+                        <p class="bio">Specializing in automotive locksmith services, Kabo has helped hundreds of clients with car lockouts and key replacements.</p>
+                        <div class="member-contact">
+                            <a href="tel:26774754661"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:lebomazongo55@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/technician2.jpg" alt="Tshepo Kgosiemang" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Tshepo Kgosiemang</h3>
+                        <p class="position">Commercial Security Specialist</p>
+                        <p class="bio">Tshepo designs and implements advanced security systems for businesses throughout the Kweneng District.</p>
+                        <div class="member-contact">
+                            <a href="tel:26774754661"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:lebomazongo55@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose JIGGAlocksmiths</h2>
+            </div>
+            
+            <div class="reasons-container">
+                <div class="reasons-list">
+                    <div class="reason-item">
+                        <div class="reason-number">01</div>
+                        <div class="reason-content">
+                            <h3>Local & Trusted</h3>
+                            <p>We're your neighbors, deeply rooted in the Mmopane community and committed to its safety.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-number">02</div>
+                        <div class="reason-content">
+                            <h3>Certified Professionals</h3>
+                            <p>All our locksmiths are licensed, background-checked, and receive ongoing training.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-number">03</div>
+                        <div class="reason-content">
+                            <h3>Transparent Pricing</h3>
+                            <p>No hidden fees - we provide upfront quotes before starting any work.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason-item">
+                        <div class="reason-number">04</div>
+                        <div class="reason-content">
+                            <h3>5-Year Guarantee</h3>
+                            <p>We stand behind our work with an industry-leading guarantee on all services.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reasons-image">
+                    <img src="images/locksmith-working.jpg" alt="Locksmith at work" loading="lazy">
+                    <div class="experience-badge">
+                        <span class="years">5+</span>
+                        <span class="label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience the JIGGAlocksmiths Difference?</h2>
+                <p>Whether you need emergency lockout assistance or want to upgrade your property's security, our team is ready to help.</p>
+                <div class="cta-buttons">
+                    <a href="tel:26774754661" class="cta-button large"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="contact.html" class="cta-button secondary large"><i class="fas fa-envelope"></i> Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-about">
                     <img src="images/logo-white.png" alt="JIGGAlocksmiths" class="footer-logo">
-                    <p>Your trusted 24/7 locksmith service</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <p>Your trusted local locksmith service in Mmopane, providing reliable 24/7 emergency locksmith services for homes, businesses, and vehicles.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lebo_zuzu/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/26774754661" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-phone"></i> 267-747-54661</p>
-                    <p><i class="fas fa-envelope"></i> lebomazongo55@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</p>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#residential">Residential Locksmith</a></li>
+                        <li><a href="services.html#commercial">Commercial Locksmith</a></li>
+                        <li><a href="services.html#automotive">Automotive Locksmith</a></li>
+                        <li><a href="services.html#emergency">Emergency Lockout</a></li>
+                        <li><a href="services.html#security">Security Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:26774754661">267-747-54661</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:lebomazongo55@gmail.com">lebomazongo55@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mmopane, Kweneng District</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JIGGAlocksmiths. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
             </div>
         </div>
     </footer>
