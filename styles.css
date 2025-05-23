@@ -606,16 +606,25 @@ textarea {
         display: block;
     }
 
+   @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 300px;
+        width: 100%;
+        max-width: none;
         height: 100vh;
         background-color: white;
         flex-direction: column;
-        padding: 80px 30px;
+        padding: 2rem;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
         z-index: 98;
